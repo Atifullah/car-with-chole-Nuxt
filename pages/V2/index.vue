@@ -69,9 +69,9 @@
 <script>
 import Header from "../components/V2/Header.vue";
 import slider from "../components/V2/slider.vue";
-import FinancialExpert from "../components/V2/Financial-expert.vue";
-import ApplyBanner from "../components/V2/Apply-Banner.vue";
-import ApplyOnline from "../components/V2/Apply-Online-section.vue";
+import FinancialExpert from "../components/V2/financial-expert.vue";
+import ApplyBanner from "../components/V2/Apply-banner.vue";
+import ApplyOnline from "../components/V2/Apply-online-section.vue";
 import financialSection from "../components/V2/financial-section.vue";
 import Blog from "../components/V2/Blog.vue";
 import TestimonialSlider from "../components/V2/testimonialSlider.vue";
