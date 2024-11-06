@@ -154,13 +154,6 @@ const handleMouseMove = (event) => {
   }
 };
 
-// Add event listener to detect mouse swipe on desktop
-onMounted(() => {
-  if (window.innerWidth >= 1024) {
-    window.addEventListener("mouseclick", handleMouseMove);
-  }
-});
-
 // Cleanup event listener when component unmounts
 onUnmounted(() => {
   window.removeEventListener("mouseclick", handleMouseMove);
