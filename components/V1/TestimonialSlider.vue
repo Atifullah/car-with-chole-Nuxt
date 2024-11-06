@@ -127,9 +127,12 @@ const currentSlide = ref(0);
 const totalSlides = 3; // Total number of cards
 
 // Card width depending on the screen size
-const cardWidth = computed(() =>
-  window.innerWidth >= 1024 ? 553 + 27 : 319 + 27
-);
+const cardWidth = computed(() => {
+  if (process.client) {
+    return window.innerWidth >= 1024 ? 553 + 27 : 319 + 27;
+  }
+  return 0; // Default value if `process.client` is false (during SSR)
+});
 
 // Functions to handle navigation
 const prevSlide = () => {

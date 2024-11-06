@@ -5,7 +5,7 @@
       <!-- Cards Wrapper -->
       <div
         class="slider flex space-x-6 items-center justify-center transition-transform duration-300"
-        :style="{ transform: `translateX(-${currentSlide * cardWidth}px)` }"
+        :style="{ transform: `translateX(-${currentSlide * 350}px)` }"
       >
         <!-- Card 1 -->
         <div class="card border-l-[1px] border-r-[1px] border-[#DEDEDE]">
@@ -133,7 +133,12 @@ const currentSlide = ref(0);
 const totalSlides = 3;
 
 // Adjust card width based on screen size
-const cardWidth = computed(() => (window.innerWidth >= 1024 ? 400 : 300));
+const cardWidth = computed(() => {
+  if (process.client) {
+    return window.innerWidth >= 1024 ? 553 + 27 : 319 + 27;
+  }
+  return 0; // Default value if `process.client` is false (during SSR)
+});
 
 // Function to move slides left
 const prevSlide = () => {
