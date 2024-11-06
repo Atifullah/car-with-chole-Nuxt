@@ -67,7 +67,7 @@
 </template>
 
 <script>
-import Header from "../components/V2/header.vue";
+import Header from "../components/V2/Header.vue";
 import slider from "../components/V2/slider.vue";
 import FinancialExpert from "../components/V2/Financial-expert.vue";
 import ApplyBanner from "../components/V2/Apply-Banner.vue";
