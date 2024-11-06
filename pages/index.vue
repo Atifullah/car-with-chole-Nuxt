@@ -65,7 +65,7 @@
 </template>
 
 <script>
-import Header from "../components/V1/header.vue";
+import Header from "../components/V1/Header.vue";
 import slider from "../components/V1/slider.vue";
 import FinancialExpert from "../components/V1/Financial-expert.vue";
 import services from "../components/V1/services.vue";
